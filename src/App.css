@@ -1,0 +1,213 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #0f0f0f;
+  color: #e5e5e5;
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+.loading-box {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  color: #aaa;
+  padding: 14px 18px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.video-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+
+.video-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.video-sub {
+  font-size: 0.85rem;
+  color: #888;
+}
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.video-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+
+.video-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.video-sub {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.subtitle {
+  color: #888;
+  margin-top: 6px;
+  font-size: 0.95rem;
+}
+
+/* URL Input Row */
+.url-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.url-input {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.url-input:focus { border-color: #ff4444; }
+.url-input:disabled { opacity: 0.5; }
+
+/* Buttons */
+.btn {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+  white-space: nowrap;
+}
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.btn:not(:disabled):hover { opacity: 0.88; }
+.btn:not(:disabled):active { transform: scale(0.97); }
+
+.btn.primary { background: #ff4444; color: #fff; }
+.btn.success { background: #22c55e; color: #fff; margin-top: 14px; }
+.btn.danger  { background: #555;    color: #fff; margin-top: 16px; }
+
+/* Error */
+.error-box {
+  background: #2a1111;
+  border: 1px solid #ff4444;
+  color: #ff8080;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+/* Info Card */
+.info-card {
+  display: flex;
+  gap: 18px;
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+.thumbnail {
+  width: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.info-text h2 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.info-text p {
+  color: #888;
+  font-size: 0.85rem;
+}
+
+/* Progress */
+.progress-wrap {
+  background: #1a1a1a;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid #2a2a2a;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #ff4444;
+  border-radius: 4px;
+  transition: width 0.4s ease;
+  flex: 1;
+  min-width: 0;
+}
+
+.progress-wrap span {
+  font-size: 0.85rem;
+  color: #888;
+  width: 36px;
+  text-align: right;
+}
+
+/* Player */
+.player-section {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.playing-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: #fff;
+}
+
+.player-wrap {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 */
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.player-wrap > div {
+  position: absolute !important;
+  top: 0; left: 0;
+}
